@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,167 +7,286 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>PERSONAL PORTFOLIO</title>
+    <title>Emmanuel Oteng Antwi | Portfolio</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background-color: #f9f9f9; }
+        nav.navbar { box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+        .home { display: flex; align-items: center; justify-content: center; min-height: 80vh; background-color: #ffffff; }
+        .home-content { text-align: center; max-width: 800px; padding: 20px; }
+        .home-content h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; }
+        .home-content h3 { font-size: 1.25rem; color: #555; margin-bottom: 20px; }
+        .btn-box a { display: inline-block; margin: 5px; padding: 10px 20px; background: #007bff; color: #fff; border-radius: 5px; text-decoration: none; transition: 0.3s; }
+        .btn-box a:hover { background: #0056b3; }
+        section { padding: 60px 0; }
+        h2 { font-weight: 700; margin-bottom: 20px; border-bottom: 2px solid #007bff; display: inline-block; padding-bottom: 5px; }
+        .card { margin-bottom: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .card-body li { margin-bottom: 10px; }
+        ul { padding-left: 20px; }
+        #about ul li strong { font-weight: 600; }
+        #skills ul { list-style-type: disc; margin-left: 20px; }
+        #skills h3 { margin-top: 30px; color: #007bff; }
+        #certifications ul li a { text-decoration: none; color: #007bff; }
+        #certifications ul li a:hover { text-decoration: underline; }
+        footer { background-color: #ffffff; box-shadow: 0 -2px 6px rgba(0,0,0,0.1); }
+        .profile-img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-bottom: 20px; border: 4px solid #007bff; }
+    </style>
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">PERSONAL PORTFOLIO</a>
+        <a class="navbar-brand fw-bold" href="#">Emmanuel Oteng Antwi</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#"class="active" style="color: black;font-style: italic;">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about" style="color: black;font-style: italic;">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#experience"style="color: black;font-style: italic;">Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills"style="color: black;font-style: italic;">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact"style="color: black;font-style: italic;">Contact</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
 </nav>
-        <header>
-                <section class="home">
-                    <div class="home-content">
-                        <h1>Hi, I'm Emmanuel Oteng Antwi</h1>
-                        <h3>Frontend Developer, Graphic Designer, IT Technician</h3>
-                        <div class="btn-box">
-                            <a href="https://www.linkedin.com/in/emmanuelotengantwi"><i class='bx bxl-linkedin'></i>LinkedIn</a>
-                            <a href="https://github.com/emmanuelotengantwi"><i class='bx bxl-github'></i>GitHub</a>
-                        </div>
-                    </div>            
-                </section>
 
-            </header>
-
-            <!-- About Section -->
-    <section id="about" class="container mt-5">
-        <h2>About Me</h2>
-        <p>
-            A self-motivated, passionate, adaptable, and IT degree graduate in
-            BSc. Information Technology Education with Second Class Upper Honor from 
-            Akenten Appiah-Menka University of Skills Training And Entrepreneurial Development, 
-            I am eager to advance my knowledge and expertise in the IT world which will help utilize
-            the professional and technical skills developed through past work experiences accumulated in
-            this field. My goal is to develop innovative solutions that address global energy challenges and
-            contribute to a sustainable future. I have a methodical, quite programming skills, ability to
-            work in team, customer-focused and good client relationship approach to work and also with a
-            strong drive to see things through to completion, able to led a team, and also the ability to
-            perform multi-task.
-        </p>
-        <ul>
-            <strong>CORE VALUE:</strong>
-                    <li>Integrity</li>
-                    <li>Accountability</li>
-                    <li>Team Work</li>
-                    <li>Services</li>
-        </ul>
-
-        <ul>
-            <strong>Education:</strong> 
-            <li>Akenten Appiah-Menka University of Skills Training And Entrepreneurial Development, Kumasi (2020-2024)- BSc. IT Education</li>
-            <li>Anglican Senior High School,KUMASI (2017–2020) -General Science</li>
+<!-- Home Section -->
+<header id="home">
+    <section class="home">
+        <div class="home-content">
+            <img src="images/profile.jpeg" alt="Emmanuel Oteng Antwi" class="profile-img">
         
-        </ul>
+            <h1>Hi, I'm Emmanuel Oteng Antwi</h1>
+            <h3>Frontend Developer, Graphic Designer, Data Manager, Certified IT Technician</h3>
+            <div class="btn-box">
+                <a href="https://www.linkedin.com/in/emmanuel-oteng-antwi/"><i class='bx bxl-linkedin'></i> LinkedIn</a>
+                <a href="https://github.com/emmanuelotengantwi"><i class='bx bxl-github'></i> GitHub</a>
+            </div>
+        </div>            
     </section>
-                                   
+</header>
 
-                               <!--Experience Section--> 
-                                <section id="experience" class="container mt-5">
-                                    <h2>Experience</h2>
-                                    <div class="card mt-3">
-                                        <div class="card-body">
-                                            <h5 class="card-title">NATIONAL SERVICE PERSONNEL</h5>
-                                            <h6 class="card-subtitle mb-2 text-muted">National Information Technology Agency (NITA), Accra, Ghana (Oct 2024 - Present)</h6>
-                                            <ul>
-                                                <li>Repairing of Office Computers.</li>
-                                                <li>Assisting in the piloting of eVisitor's Logbook.</li>
-                                                <li>Assisting Staffs with both software and hardware isses</li>
-                                                <li>Network Troubleshooting</li>
-                                                <li>Installing Softwares on various computers.</li>
-                                                <li>Assisting in driving of change within the agency.</li>
-                                                <li>Facilitating in some organized workshops and trainings</li>
-                                                <li>Ensuring the effective utilization of the Smartworkplace.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="card mt-3">
-                                        <div class="card-body">
-                                            <h5 class="card-title">I.C.T Tutor(School Based Internship)</h5>
-                                            <h6 class="card-subtitle mb-2 text-muted">Osei Adutwum Senior High School, Jachie - Lake Bosomtwe Road (Jan 2024 - March 2024)</h6>
-                                            <ul>
-                                                <li>I.C.T Tutor. </li>
-                                                <li>Assisting in supervision of any internal examination invigilation</li>
-                                                <li>Repairing computer at the I.C.T labs.</li>
-                                                <li>Installing Softwares on various computers.</li>
-                                                <li>Installation Of Windows Operating System</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                    
-                                    <div class="card mt-3">
-                                        <div class="card-body">
-                                            <h5 class="card-title">IT Consultant & Technician(Industrial Attachment)</h5>
-                                            <h6 class="card-subtitle mb-2 text-muted">Ghana Revenue Authority, Suame TSC-Kumasi (Sep 2023 - Dec 2023)</h6>
-                                            <ul>
-                                                <li>Repairing of Office Computers.</li>
-                                                <li>Recording of Document Received.</li>
-                                                <li>File Document on Taxpayers' folder.</li>
-                                                <li>Issuing and receivng requested files.</li>
-                                                <li>Maintaining Taxpayers' folder</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                    
-                                    <div class="card mt-3">
-                                        <div class="card-body">
-                                            <h5 class="card-title">IT Technical & Support Officer(Industrial Attachment)</h5>
-                                            <h6 class="card-subtitle mb-2 text-muted">KUAPA KOKOO COOPERATIVE COCOA FARMERS & MARKETING UNION LIMITED, KUMASI-GHANA(Oct 2022 - Dec 2022)</h6>
-                                            <ul>
-                                                <li>Assist in entering farmers data.</li>
-                                                <li>Provided extensive IT support to internal and external stakeholders.</li>
-                                                <li>Installed new hardware and applications, updated existing system and continually monitor network performance. </li>
-                                                <li>Assist in processing and cleaning</li>
-                                                <li>Updating Staff Data</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                
-                                </section>
-                    
-                                <!--Skills Section-->
-                                <section id="skills" class="container mt-5">
-                                    <h2>Skills</h2>
-                                    <ul class="list-unstyled">
-                                        <li><strong>Graphic Design Software:</strong> Adobe Photoshop,Canva</li>
-                                        <li><strong>Computer Skills:</strong> Microsoft Office Suite (Word, Excel, PowerPoint)</li>
-                                        <li><strong>Programming/Software Engineering:</strong> JavaScript, HTML, CSS, PHP</li>
-                                        <li><strong>Soft skills:</strong> Interpersonal skills, leadership skills, and organization skills.</li>
-                                    </ul>
-                                </section>
+<!-- About Section -->
+<section id="about" class="container mt-5">
+    <h2>About Me</h2>
+    <p>
+        A motivated IT professional passionate about using technology to solve real-world problems. 
+        Backed by hands-on experience in technical support, data management, office administration, 
+        web development and end-user training, I specialize in delivering solutions that enhance 
+        efficiency and collaboration. Committed to continuous growth, I aim to become an impact-driven 
+        professional who not only understands systems deeply but also empowers others through 
+        technology.
+    </p>
 
-                                <!--Contact Section--> 
-                                <section id="contact" class="container mt-5">
-                                    <h2>Contact Me</h2>
-                                <div class="contact-info mt-4">
-                                    <p><strong>Email:</strong> <a href="mailto:emmanuelotengantwi@gmail.com">emmanuelotengantwi@gmail.com</a></p>
-                                    <p><strong>WhatsApp and Call:</strong> <a href="tel:+233593936951">+233 59 393 6951</a></p>
-                                    
-                                    </div>
-                                </section>
+    <ul>
+        <strong>CORE VALUE:</strong>
+        <li>Integrity</li>
+        <li>Accountability</li>
+        <li>Team Work</li>
+        <li>Services</li>
+    </ul>
 
-   
-    <!-- Footer -->
-    <footer class="text-center mt-5 py-4 bg-light">
-        <p>&copy; 2025 Emmanuel Oteng Antwi. All rights reserved.</p>
-    </footer>
+    <ul>
+        <strong>Educational Background:</strong> 
+        <li>
+        ❖ BSc Information Technology Education | 2020-2024<br>
+        Akenten Appiah-Menka University of Skills Training and Entrepreneurial Development<br>
+        AAMUSTED (Kumasi campus) - GHANA<br>
+        Course Representative – Department of IT Education<br>
+        LANGUAGE - ENGLISH
+        </li>
+        <li>Anglican Senior High School,KUMASI (2017–2020) - General Science</li>
+    </ul>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <h3>RESEARCH & PROJECTS</h3>
+    <ul>
+        <li><strong>Web-Based Inventory Management System</strong> – Undergraduate Research Project
+            <ul>
+                <li>Designed and implemented a web-based system to manage inventory data efficiently. Developed features for data entry, retrieval, and reporting, emphasizing data accuracy and usability.</li>
+                <li><strong>Skills used:</strong> PHP, HTML, CSS, database management, data cleaning, reporting</li>
+            </ul>
+        </li>
+        <li><strong>Development of Washing Bay System</strong> – Mini Project
+            <ul>
+                <li>Developed a software system for managing and automating washing bay operations, including tracking, scheduling, and reporting.</li>
+                <li><strong>Skills used:</strong> C#, database management, data entry, software development</li>
+            </ul>
+        </li>
+        <li><strong>E-Levy Calculator</strong> – Mini Project
+            <ul>
+                <li>Developed a system to calculate electronic levy (E-Levy) transactions accurately and efficiently. Implemented features for user input, computation, and reporting.</li>
+                <li><strong>Skills used:</strong> Java, database management, data validation, reporting</li>
+            </ul>
+        </li>
+    </ul>
+</section>
 
+<!-- Experience Section -->
+<section id="experience" class="container mt-5">
+    <h2>Experience</h2>
+
+    <!-- DATA MANAGER AND OFFICE ASSISTANT -->
+    <div class="card shadow-sm rounded mt-3">
+        <div class="card-body">
+            <h5 class="card-title">DATA MANAGER AND OFFICE ASSISTANT (FULL TIME)</h5>
+            <h6 class="card-subtitle mb-2 text-muted">SEKYERE EAST (MICL) COOPERATIVE FARMERS UNION, Kumasi (Sep 2025 - Current)</h6>
+            <ul>
+                <li>I assist in Data entry, data cleaning, data analysis, software administration</li>
+                <li>I provide administrative assistance to the team, including answering phone calls, responding to emails, and receiving visitors at the office.</li>
+                <li>I manage and maintain files, documents, and records, both physical and digital.</li>
+                <li>I coordinate meetings, appointments, and schedules for team members.</li>
+                <li>Communicate effectively with team members, management, and clients</li>
+                <li>Maintain an organized and clutter-free office environment.</li>
+                <li>Monitor and maintain office supplies.</li>
+                <li>Conducted field visit to capture farm sizes using ArcGIS field maps.</li>
+                <li>Collected, recorded and validated geospatial data for accurate mapping and analysis.</li>
+                <li>Worked on a risk assessment map focusing on identifying and analyzing encroached farmers near forest reserves.</li>
+                <li>Taking and recording farmers’ cocoa production volumes ensuring accurate and reliable datasets.</li>
+                <li>Managed and updated farmers’ membership data, maintaining clean, organized and verifiable records.</li>
+                <li>Prepared financial account reports and supported the audit process by cross-checking all financial records and supporting documentation accurately matched.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Technical Support (Part Time Remote Worker) -->
+    <div class="card shadow-sm rounded mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Technical Support (Part Time Remote Worker)</h5>
+            <h6 class="card-subtitle mb-2 text-muted">AFRICA CENTRE FOR DIGITAL TRANSFORMATION (ACDT), Accra (Sep 2025 - Present)</h6>
+            <ul>
+                <li>Collaborated with team members virtually to ensure timely completion of assigned tasks and deliverables.</li>
+                <li>Contributed to the development of digital tools, resources, and documentation for organizational programs.</li>
+                <li>Designed, developed, and currently manage the company’s website, ensuring functionality, updates, and user-friendliness.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- NATIONAL SERVICE PERSONNEL -->
+    <div class="card shadow-sm rounded mt-3">
+        <div class="card-body">
+            <h5 class="card-title">National Service Personnel</h5>
+            <h6 class="card-subtitle mb-2 text-muted">National Information Technology Agency (NITA), Accra, Ghana (Oct 2024 - Present)</h6>
+            <ul>
+                <li>Assisted in gathering and aligning website content and requirements with the agency’s specifications to ensure accuracy and regulatory compliance.</li>
+                <li>Actively tracked action points to maintain project momentum and deliver milestones on schedule.</li>
+                <li>Coordinated timely follow-ups with cross-functional units to resolve pending action points and maintain workflow continuity.</li>
+                <li>Participated in user testing and documented feedback to guide iterative improvement.</li>
+                <li>Conducted research and developed compliance checklists aligned with the Government of Ghana Enterprise Architecture Framework.</li>
+                <li>Verified SSL certificates and domain details for Ministries, Departments and Agencies (MDAs) to ensure secure communication.</li>
+                <li>Prepared weekly, monthly, and quarterly reports and drafted accurate meeting minutes for management.</li>
+                <li>Coordinated meeting schedules, tracked action points, and supported workflow continuity.</li>
+                <li>Facilitated training for interns on Windows OS installation, Microsoft Office configuration, virtualization, and WordPress setup.</li>
+                <li>Supported E-Visitor Logbook pilot operations by setting up devices, troubleshooting, and coordinating feedback for improvement.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- I.C.T Tutor -->
+    <div class="card shadow-sm rounded mt-3">
+        <div class="card-body">
+            <h5 class="card-title">I.C.T Tutor (School Based Internship)</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Osei Adutwum Senior High School, Jachie - Lake Bosomtwe Road (Jan 2024 - Mar 2024)</h6>
+            <ul>
+                <li>I.C.T Tutor.</li>
+                <li>Assisted in supervision of internal examination invigilation.</li>
+                <li>Repaired computers at the I.C.T labs.</li>
+                <li>Installed software on various computers.</li>
+                <li>Installation of Windows Operating System.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- IT Consultant & Technician -->
+    <div class="card shadow-sm rounded mt-3">
+        <div class="card-body">
+            <h5 class="card-title">IT Consultant & Technician (Industrial Attachment)</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Ghana Revenue Authority, Suame TSC-Kumasi (Sep 2023 - Dec 2023)</h6>
+            <ul>
+                <li>Repairing of Office Computers.</li>
+                <li>Recording of Document Received.</li>
+                <li>File Document on Taxpayers' folder.</li>
+                <li>Issuing and receiving requested files.</li>
+                <li>Maintaining Taxpayers' folder.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- IT Technical & Support Officer -->
+    <div class="card shadow-sm rounded mt-3">
+        <div class="card-body">
+            <h5 class="card-title">IT Technical & Support Officer (Industrial Attachment)</h5>
+            <h6 class="card-subtitle mb-2 text-muted">KUAPA KOKOO Cooperative Cocoa Farmers & Marketing Union Limited, Kumasi-Ghana (Oct 2022 - Dec 2022)</h6>
+            <ul>
+                <li>Assist in entering farmers data.</li>
+                <li>Provided extensive IT support to internal and external stakeholders.</li>
+                <li>Installed new hardware and applications, updated existing system and continually monitor network performance.</li>
+                <li>Assist in processing and cleaning.</li>
+                <li>Updating Staff Data.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills" class="container mt-5">
+    <h2>SKILLS</h2>
+    <h3>Technical Skills</h3>
+    <ul>
+        <li>ArcGIS Pro – geospatial data collection and mapping</li>
+        <li>Risk assessment mapping (encroached farms near forest reserves)</li>
+        <li>Data entry, cleaning, management, and analysis</li>
+        <li>Financial account report preparation and audit support</li>
+        <li>Website design, development, and management (PHP, HTML, CSS, WordPress)</li>
+        <li>Software development – PHP, C#, Java, database management</li>
+        <li>IT support – hardware, network troubleshooting, software installation</li>
+        <li>Compliance and documentation – checklists, SSL/domain verification, report preparation</li>
+        <li>Digital tools and transformation initiatives support</li>
+    </ul>
+    <h3>Soft Skills</h3>
+    <ul>
+        <li>Attention to detail</li>
+        <li>Organization and time management</li>
+        <li>Communication and collaboration</li>
+        <li>Problem-solving and analytical thinking</li>
+        <li>Adaptability and learning agility</li>
+        <li>Leadership and initiative</li>
+        <li>Team collaboration</li>
+        <li>Professionalism & integrity</li>
+    </ul>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications" class="container mt-5">
+    <h2>CERTIFICATIONS</h2>
+    <ul>
+        <li><a href="https://regulatory.nita.gov.gh/verify-certificate?certificate_number=NITA/ITG/31202352" target="_blank">NITA IT Graduate Certificate (NITA/ITG/31202352)</a></li>
+        <li><a href="https://regulatory.nita.gov.gh/verify-certificate?certificate_number=NITA/ITT/21200852" target="_blank">NITA IT Technician Certificate (NITA/ITT/21200852)</a></li>
+        <li><a href="https://www.udemy.com/certificate/UC-aef4081c-6f8d-463a-9528-1716fdb562b7/" target="_blank">Udemy Wordpress Website Developer Certificate</a></li>
+        <li><a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-af65dc8d-136a-4bc0-9dcd-3b23be9ad1be.pdf" target="_blank">Udemy Bash Scripting for Linux Security Certificate</a></li>
+        <li><a href="https://blob.sololearn.com/certificates/de6ca3f1-e2a5-402a-bfe5-ecb431b208a4.pdf" target="_blank">SoloLearn HTML Certificate</a></li>
+        <li><a href="https://blob.sololearn.com/certificates/c58eae18-9272-4bac-9508-4e8144ff2d70.pdf" target="_blank">SoloLearn SQL Certificate</a></li>
+    </ul>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container mt-5">
+    <h2>Contact Me</h2>
+    <div class="contact-info mt-4">
+        <p><strong>Email:</strong> <a href="mailto:emmanuelotengantwi@gmail.com">emmanuelotengantwi@gmail.com</a></p>
+        <p><strong>WhatsApp and Call:</strong> <a href="tel:+233593936951">+233 59 393 6951</a></p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center mt-5 py-4 bg-light">
+    <p>&copy; 2026 Emmanuel Oteng Antwi. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
