@@ -217,3 +217,62 @@ footer {
         border-radius: 10px;
     }
 }
+
+/* Flyer Gallery */
+#designs h2 {
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #081b29;
+    text-align: center;
+}
+
+#designs p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Row spacing */
+#designs .row {
+    gap: 20px; /* space between flyers */
+}
+
+/* Flyer Card */
+.flyer-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Flyer Images */
+.flyer-card img {
+    width: 100%;
+    height: auto;           /* ensures full image visible */
+    display: block;
+    object-fit: contain;     /* scale image to fit card without cropping */
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.flyer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+}
+
+.flyer-card:hover img {
+    transform: scale(1.03); /* subtle zoom effect on hover */
+}
+
+/* Optional Flyer Titles */
+.flyer-card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333333;
+    margin: 12px;
+    text-align: center;
+}
+.flyer-card-title:hover {
+    color: #00abf0;
+}
