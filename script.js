@@ -1,49 +1,82 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Smooth Scroll for Navbar Links
-    const navbarLinks = document.querySelectorAll('.nav-link');
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = Array.from(document.querySelectorAll(".navbar .nav-link"));
+    const sections = Array.from(document.querySelectorAll("header#home, section[id]"));
+    const navbar = document.querySelector(".site-navbar");
+    const navCollapse = document.querySelector(".navbar-collapse");
+    const bsCollapse = navCollapse ? new bootstrap.Collapse(navCollapse, { toggle: false }) : null;
 
-    navbarLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                e.preventDefault();
-                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const getOffset = () => (navbar ? navbar.offsetHeight + 12 : 88);
+
+    const setActiveLink = () => {
+        const scrollY = window.scrollY + getOffset() + 4;
+        let activeId = "home";
+
+        for (const section of sections) {
+            if (scrollY >= section.offsetTop) {
+                activeId = section.id;
+            }
+        }
+
+        navLinks.forEach((link) => {
+            const isActive = link.getAttribute("href") === `#${activeId}`;
+            link.classList.toggle("active", isActive);
+        });
+    };
+
+    navLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+            const href = link.getAttribute("href");
+            if (!href || !href.startsWith("#")) {
+                return;
+            }
+
+            const target = document.querySelector(href);
+            if (!target) {
+                return;
+            }
+
+            event.preventDefault();
+            const top = target.offsetTop - getOffset();
+            window.scrollTo({ top, behavior: "smooth" });
+
+            if (navCollapse && navCollapse.classList.contains("show") && bsCollapse) {
+                bsCollapse.hide();
             }
         });
     });
 
-    // Contact Form Submission (Optional - only if a form exists)
-    const contactForm = document.querySelector('form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            contactForm.reset();
-        });
-    }
+    const revealItems = document.querySelectorAll(".reveal");
+    const revealObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.16 }
+    );
 
-    // Optional: Add scroll-to-top button functionality
-    const scrollBtn = document.createElement('button');
-    scrollBtn.textContent = '↑';
-    scrollBtn.style.position = 'fixed';
-    scrollBtn.style.bottom = '30px';
-    scrollBtn.style.right = '30px';
-    scrollBtn.style.padding = '10px 15px';
-    scrollBtn.style.border = 'none';
-    scrollBtn.style.borderRadius = '50%';
-    scrollBtn.style.backgroundColor = '#00abf0';
-    scrollBtn.style.color = '#fff';
-    scrollBtn.style.cursor = 'pointer';
-    scrollBtn.style.display = 'none';
-    scrollBtn.style.zIndex = '999';
-    document.body.appendChild(scrollBtn);
+    revealItems.forEach((item) => revealObserver.observe(item));
 
-    scrollBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    const scrollTopBtn = document.createElement("button");
+    scrollTopBtn.className = "scroll-top-btn";
+    scrollTopBtn.setAttribute("aria-label", "Back to top");
+    scrollTopBtn.innerHTML = '<i class="bx bx-up-arrow-alt"></i>';
+    document.body.appendChild(scrollTopBtn);
+
+    scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    window.addEventListener('scroll', () => {
-        scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
+    const onScroll = () => {
+        setActiveLink();
+        scrollTopBtn.classList.toggle("show", window.scrollY > 500);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", setActiveLink);
+
+    setActiveLink();
 });

@@ -1,43 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Portfolio of Emmanuel Oteng Antwi">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Emmanuel Oteng Antwi | Portfolio</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background-color: #f9f9f9; }
-        nav.navbar { box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-        .home { display: flex; align-items: center; justify-content: center; min-height: 80vh; background-color: #ffffff; }
-        .home-content { text-align: center; max-width: 800px; padding: 20px; }
-        .home-content h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; }
-        .home-content h3 { font-size: 1.25rem; color: #555; margin-bottom: 20px; }
-        .btn-box a { display: inline-block; margin: 5px; padding: 10px 20px; background: #007bff; color: #fff; border-radius: 5px; text-decoration: none; transition: 0.3s; }
-        .btn-box a:hover { background: #0056b3; }
-        section { padding: 60px 0; }
-        h2 { font-weight: 700; margin-bottom: 20px; border-bottom: 2px solid #007bff; display: inline-block; padding-bottom: 5px; }
-        .card { margin-bottom: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .card-body li { margin-bottom: 10px; }
-        ul { padding-left: 20px; }
-        #about ul li strong { font-weight: 600; }
-        #skills ul { list-style-type: disc; margin-left: 20px; }
-        #skills h3 { margin-top: 30px; color: #007bff; }
-        #certifications ul li a { text-decoration: none; color: #007bff; }
-        #certifications ul li a:hover { text-decoration: underline; }
-        footer { background-color: #ffffff; box-shadow: 0 -2px 6px rgba(0,0,0,0.1); }
-        .profile-img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-bottom: 20px; border: 4px solid #007bff; }
-    </style>
 </head>
 <body>
+<div class="background-orb orb-a"></div>
+<div class="background-orb orb-b"></div>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="#">Emmanuel Oteng Antwi</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+<nav class="navbar navbar-expand-lg fixed-top site-navbar">
+    <div class="container">
+        <a class="navbar-brand fw-bold brand-mark" href="#">Emmanuel Oteng Antwi</a>
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -56,29 +39,31 @@
 
 <!-- Home Section -->
 <header id="home">
-    <section class="home">
-        <div class="home-content">
-            <img src="images/profile.jpeg" alt="Emmanuel Oteng Antwi" class="profile-img">
-        
-            <h1>Hi, I'm Emmanuel Oteng Antwi</h1>
-            <h3>Frontend Developer, Graphic Designer, Data Manager, Certified IT Technician</h3>
-            <div class="btn-box">
-                <a href="https://www.linkedin.com/in/emmanuel-oteng-antwi/"><i class='bx bxl-linkedin'></i> LinkedIn</a>
-                <a href="https://github.com/emmanuelotengantwi"><i class='bx bxl-github'></i> GitHub</a>
+    <section class="home section-pad">
+        <div class="container">
+            <div class="home-content reveal">
+                <img src="images/profile.jpeg" alt="Emmanuel Oteng Antwi" class="profile-img">
+
+                <h1>Hi, I'm Emmanuel Oteng Antwi</h1>
+                <h3>Frontend Developer, Graphic Designer, Data Manager, Certified IT Technician</h3>
+                <div class="btn-box">
+                    <a class="action-btn action-primary" href="https://www.linkedin.com/in/emmanuel-oteng-antwi/"><i class='bx bxl-linkedin'></i> LinkedIn</a>
+                    <a class="action-btn action-secondary" href="https://github.com/emmanuelotengantwi"><i class='bx bxl-github'></i> GitHub</a>
+                </div>
             </div>
-        </div>            
+        </div>
     </section>
 </header>
 
 <!-- About Section -->
-<section id="about" class="container mt-5">
+<section id="about" class="container section-pad reveal">
     <h2>About Me</h2>
     <p>
-        A motivated IT professional passionate about using technology to solve real-world problems. 
-        Backed by hands-on experience in technical support, data management, office administration, 
-        web development and end-user training, I specialize in delivering solutions that enhance 
-        efficiency and collaboration. Committed to continuous growth, I aim to become an impact-driven 
-        professional who not only understands systems deeply but also empowers others through 
+        A motivated IT professional passionate about using technology to solve real-world problems.
+        Backed by hands-on experience in technical support, data management, office administration,
+        web development and end-user training, I specialize in delivering solutions that enhance
+        efficiency and collaboration. Committed to continuous growth, I aim to become an impact-driven
+        professional who not only understands systems deeply but also empowers others through
         technology.
     </p>
 
@@ -91,7 +76,7 @@
     </ul>
 
     <ul>
-        <strong>Educational Background:</strong> 
+        <strong>Educational Background:</strong>
         <li>
         ❖ BSc Information Technology Education | 2020-2024<br>
         Akenten Appiah-Menka University of Skills Training and Entrepreneurial Development<br>
@@ -126,11 +111,11 @@
 </section>
 
 <!-- Experience Section -->
-<section id="experience" class="container mt-5">
-    <h2>Experience</h2>
+<section id="experience" class="container section-pad">
+    <h2 class="reveal">Experience</h2>
 
     <!-- DATA MANAGER AND OFFICE ASSISTANT -->
-    <div class="card shadow-sm rounded mt-3">
+    <div class="card shadow-sm rounded mt-3 reveal">
         <div class="card-body">
             <h5 class="card-title">DATA MANAGER AND OFFICE ASSISTANT (FULL TIME)</h5>
             <h6 class="card-subtitle mb-2 text-muted">SEKYERE EAST (MICL) COOPERATIVE FARMERS UNION, Kumasi (Sep 2025 - Current)</h6>
@@ -153,7 +138,7 @@
     </div>
 
     <!-- Technical Support (Part Time Remote Worker) -->
-    <div class="card shadow-sm rounded mt-3">
+    <div class="card shadow-sm rounded mt-3 reveal">
         <div class="card-body">
             <h5 class="card-title">Technical Support (Part Time Remote Worker)</h5>
             <h6 class="card-subtitle mb-2 text-muted">AFRICA CENTRE FOR DIGITAL TRANSFORMATION (ACDT), Accra (Sep 2025 - Present)</h6>
@@ -166,7 +151,7 @@
     </div>
 
     <!-- NATIONAL SERVICE PERSONNEL -->
-    <div class="card shadow-sm rounded mt-3">
+    <div class="card shadow-sm rounded mt-3 reveal">
         <div class="card-body">
             <h5 class="card-title">National Service Personnel</h5>
             <h6 class="card-subtitle mb-2 text-muted">National Information Technology Agency (NITA), Accra, Ghana (Oct 2024 - Present)</h6>
@@ -186,7 +171,7 @@
     </div>
 
     <!-- I.C.T Tutor -->
-    <div class="card shadow-sm rounded mt-3">
+    <div class="card shadow-sm rounded mt-3 reveal">
         <div class="card-body">
             <h5 class="card-title">I.C.T Tutor (School Based Internship)</h5>
             <h6 class="card-subtitle mb-2 text-muted">Osei Adutwum Senior High School, Jachie - Lake Bosomtwe Road (Jan 2024 - Mar 2024)</h6>
@@ -201,7 +186,7 @@
     </div>
 
     <!-- IT Consultant & Technician -->
-    <div class="card shadow-sm rounded mt-3">
+    <div class="card shadow-sm rounded mt-3 reveal">
         <div class="card-body">
             <h5 class="card-title">IT Consultant & Technician (Industrial Attachment)</h5>
             <h6 class="card-subtitle mb-2 text-muted">Ghana Revenue Authority, Suame TSC-Kumasi (Sep 2023 - Dec 2023)</h6>
@@ -216,7 +201,7 @@
     </div>
 
     <!-- IT Technical & Support Officer -->
-    <div class="card shadow-sm rounded mt-3">
+    <div class="card shadow-sm rounded mt-3 reveal">
         <div class="card-body">
             <h5 class="card-title">IT Technical & Support Officer (Industrial Attachment)</h5>
             <h6 class="card-subtitle mb-2 text-muted">KUAPA KOKOO Cooperative Cocoa Farmers & Marketing Union Limited, Kumasi-Ghana (Oct 2022 - Dec 2022)</h6>
@@ -231,104 +216,104 @@
     </div>
 </section>
 
-        <section id="designs" class="container mt-5">
-    <h2>Graphic Design Works</h2>
-    <p class="text-muted">
+<section id="designs" class="container section-pad">
+    <h2 class="reveal">Graphic Design Works</h2>
+    <p class="text-muted reveal">
         Some of my Graphic Designing Works
     </p>
 
     <div class="row g-4 mt-4">
 
         <!-- Flyer 1 -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
             <div class="flyer-card">
                 <img src="images/designs/flyer1.jpeg" alt="Event Flyer">
             </div>
         </div>
 
         <!-- Flyer 2 -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
             <div class="flyer-card">
                 <img src="images/designs/flyer2.jpeg" alt="Event Flyer">
             </div>
         </div>
 
         <!-- Flyer 3 -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
             <div class="flyer-card">
                 <img src="images/designs/flyer3.jpeg" alt="Event Flyer">
             </div>
         </div>
 
         <!-- Flyer 4 -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
             <div class="flyer-card">
                 <img src="images/designs/flyer4.jpeg" alt="Event Flyer">
             </div>
         </div>
 
         <!-- Flyer 5 -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
             <div class="flyer-card">
                 <img src="images/designs/flyer5.png" alt="Event Flyer">
             </div>
         </div>
 
         <!-- Flyer 6 -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
             <div class="flyer-card">
                 <img src="images/designs/flyer6.png" alt="Event Flyer">
-                
+
             </div>
         </div>
          <!-- Flyer 7 -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
             <div class="flyer-card">
                 <img src="images/designs/flyer7.png" alt="Event Flyer">
             </div>
         </div>
         <!-- Flyer 8 -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
             <div class="flyer-card">
                 <img src="images/designs/flyer8.png" alt="Event Flyer">
             </div>
         </div>
 
         <!-- Flyer 9 -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
             <div class="flyer-card">
                 <img src="images/designs/flyer9.png" alt="Event Flyer">
             </div>
         </div>
 
         <!-- Flyer 10 -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
             <div class="flyer-card">
                 <img src="images/designs/flyer10.jpeg" alt="Event Flyer">
             </div>
         </div>
 
         <!-- Flyer 11 -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
             <div class="flyer-card">
                 <img src="images/designs/flyer11.jpeg" alt="Event Flyer">
             </div>
         </div>
 
         <!-- Flyer 12 -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
             <div class="flyer-card">
                 <img src="images/designs/flyer12.png" alt="Event Flyer">
             </div>
         </div>
 
-        
+
     </div>
 </section>
 
 
 <!-- Skills Section -->
-<section id="skills" class="container mt-5">
+<section id="skills" class="container section-pad reveal">
     <h2>SKILLS</h2>
     <h3>Technical Skills</h3>
     <ul>
@@ -356,7 +341,7 @@
 </section>
 
 <!-- Certifications Section -->
-<section id="certifications" class="container mt-5">
+<section id="certifications" class="container section-pad reveal">
     <h2>CERTIFICATIONS</h2>
     <ul>
         <li><a href="https://regulatory.nita.gov.gh/verify-certificate?certificate_number=NITA/ITG/31202352" target="_blank">NITA IT Graduate Certificate (NITA/ITG/31202352)</a></li>
@@ -369,7 +354,7 @@
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="container mt-5">
+<section id="contact" class="container section-pad reveal">
     <h2>Contact Me</h2>
     <div class="contact-info mt-4">
         <p><strong>Email:</strong> <a href="mailto:emmanuelotengantwi@gmail.com">emmanuelotengantwi@gmail.com</a></p>
@@ -378,10 +363,11 @@
 </section>
 
 <!-- Footer -->
-<footer class="text-center mt-5 py-4 bg-light">
+<footer class="site-footer text-center">
     <p>&copy; 2026 Emmanuel Oteng Antwi. All rights reserved.</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
