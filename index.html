@@ -13,13 +13,15 @@
     <title>Emmanuel Oteng Antwi | Portfolio</title>
 </head>
 <body>
-<div class="background-orb orb-a"></div>
-<div class="background-orb orb-b"></div>
+<a class="skip-link" href="#home">Skip to content</a>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top site-navbar">
     <div class="container">
-        <a class="navbar-brand fw-bold brand-mark" href="#">Emmanuel Oteng Antwi</a>
+        <a class="navbar-brand fw-bold brand-mark" href="#home" aria-label="Go to home">
+            <span class="brand-badge" aria-hidden="true">EOA</span>
+            <span class="brand-text">Emmanuel</span>
+        </a>
         <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -34,6 +36,9 @@
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </div>
+        <button class="theme-toggle ms-lg-3" id="themeToggle" type="button" aria-label="Toggle theme">
+            <i class='bx bx-moon' aria-hidden="true"></i>
+        </button>
     </div>
 </nav>
 
@@ -41,329 +46,346 @@
 <header id="home">
     <section class="home section-pad">
         <div class="container">
-            <div class="home-content reveal">
-                <img src="images/profile.jpeg" alt="Emmanuel Oteng Antwi" class="profile-img">
-
-                <h1>Hi, I'm Emmanuel Oteng Antwi</h1>
-                <h3>Frontend Developer, Graphic Designer, Data Manager, Certified IT Technician</h3>
-                <div class="btn-box">
-                    <a class="action-btn action-primary" href="https://www.linkedin.com/in/emmanuel-oteng-antwi/"><i class='bx bxl-linkedin'></i> LinkedIn</a>
-                    <a class="action-btn action-secondary" href="https://github.com/emmanuelotengantwi"><i class='bx bxl-github'></i> GitHub</a>
+            <div class="home-content">
+                <div class="hero-copy">
+                    <p class="hero-eyebrow"><span id="typed-role"></span><span class="type-cursor" aria-hidden="true">|</span></p>
+                    <h1 class="hero-title">
+                        <span class="hero-line">Emmanuel Oteng</span>
+                        <span class="hero-line">Antwi</span>
+                    </h1>
+                    <p class="hero-subtitle">An IT professional focused on building user-friendly web experiences and supporting teams with reliable technical solutions.</p>
+                    <div class="btn-box">
+                        <a class="action-btn action-primary" href="https://www.linkedin.com/in/emmanuel-oteng-antwi/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i> LinkedIn</a>
+                        <a class="action-btn action-secondary" href="https://github.com/emmanuelotengantwi" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i> GitHub</a>
+                        <a class="action-btn action-secondary" href="mailto:emmanuelotengantwi@gmail.com"><i class='bx bx-envelope'></i> Email</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <div class="avatar-ring">
+                        <img src="images/profile.jpeg" alt="Emmanuel Oteng Antwi" class="profile-img">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 </header>
 
-<!-- About Section -->
+<!-- About -->
 <section id="about" class="container section-pad reveal">
-    <h2>About Me</h2>
-    <p>
-        A motivated IT professional passionate about using technology to solve real-world problems.
-        Backed by hands-on experience in technical support, data management, office administration,
-        web development and end-user training, I specialize in delivering solutions that enhance
-        efficiency and collaboration. Committed to continuous growth, I aim to become an impact-driven
-        professional who not only understands systems deeply but also empowers others through
-        technology.
-    </p>
+    <h2>About</h2>
 
-    <ul>
-        <strong>CORE VALUE:</strong>
-        <li>Integrity</li>
-        <li>Accountability</li>
-        <li>Team Work</li>
-        <li>Services</li>
-    </ul>
+    <div class="about-body">
+        <div class="about-content">
+            <p class="about-intro">
+                A motivated IT professional passionate about using technology to solve real-world problems. Backed by hands-on experience in technical support, data management, office administration, web development and end-user training, I specialize in delivering solutions that enhance efficiency and collaboration.
+            </p>
+            <p class="about-summary">
+                Committed to continuous growth, I aim to become an impact-driven professional who not only understands systems deeply but also empowers others through technology.
+            </p>
+            <div class="about-values">
+                <span>Integrity</span>
+                <span>Accountability</span>
+                <span>Team Work</span>
+                <span>Services</span>
+            </div>
 
-    <ul>
-        <strong>Educational Background:</strong>
-        <li>
-        ❖ BSc Information Technology Education | 2020-2024<br>
-        Akenten Appiah-Menka University of Skills Training and Entrepreneurial Development<br>
-        AAMUSTED (Kumasi campus) - GHANA<br>
-        Course Representative – Department of IT Education<br>
-        LANGUAGE - ENGLISH
-        </li>
-        <li>Anglican Senior High School,KUMASI (2017–2020) - General Science</li>
-    </ul>
+            <h3>Educational Background</h3>
+            <div class="edu-row">
+                <span class="edu-year">2020 – 2024</span>
+                <div>
+                    <div class="edu-degree">BSc Information Technology Education</div>
+                    <div class="edu-school">Akenten Appiah-Menka University of Skills Training and Entrepreneurial Development (AAMUSTED), Kumasi Campus — Ghana</div>
+                    <div class="edu-note">Course Representative – Department of IT Education</div>
+                </div>
+            </div>
+            <div class="edu-row">
+                <span class="edu-year">2017 – 2020</span>
+                <div>
+                    <div class="edu-degree">General Science</div>
+                    <div class="edu-school">Anglican Senior High School, Kumasi</div>
+                </div>
+            </div>
+        </div>
 
-    <h3>RESEARCH & PROJECTS</h3>
-    <ul>
-        <li><strong>Web-Based Inventory Management System</strong> – Undergraduate Research Project
-            <ul>
-                <li>Designed and implemented a web-based system to manage inventory data efficiently. Developed features for data entry, retrieval, and reporting, emphasizing data accuracy and usability.</li>
-                <li><strong>Skills used:</strong> PHP, HTML, CSS, database management, data cleaning, reporting</li>
-            </ul>
-        </li>
-        <li><strong>Development of Washing Bay System</strong> – Mini Project
-            <ul>
-                <li>Developed a software system for managing and automating washing bay operations, including tracking, scheduling, and reporting.</li>
-                <li><strong>Skills used:</strong> C#, database management, data entry, software development</li>
-            </ul>
-        </li>
-        <li><strong>E-Levy Calculator</strong> – Mini Project
-            <ul>
-                <li>Developed a system to calculate electronic levy (E-Levy) transactions accurately and efficiently. Implemented features for user input, computation, and reporting.</li>
-                <li><strong>Skills used:</strong> Java, database management, data validation, reporting</li>
-            </ul>
-        </li>
-    </ul>
-</section>
-
-<!-- Experience Section -->
-<section id="experience" class="container section-pad">
-    <h2 class="reveal">Experience</h2>
-
-    <!-- DATA MANAGER AND OFFICE ASSISTANT -->
-    <div class="card shadow-sm rounded mt-3 reveal">
-        <div class="card-body">
-            <h5 class="card-title">DATA MANAGER AND OFFICE ASSISTANT (FULL TIME)</h5>
-            <h6 class="card-subtitle mb-2 text-muted">SEKYERE EAST (MICL) COOPERATIVE FARMERS UNION, Kumasi (Sep 2025 - Current)</h6>
-            <ul>
-                <li>I assist in Data entry, data cleaning, data analysis, software administration</li>
-                <li>I provide administrative assistance to the team, including answering phone calls, responding to emails, and receiving visitors at the office.</li>
-                <li>I manage and maintain files, documents, and records, both physical and digital.</li>
-                <li>I coordinate meetings, appointments, and schedules for team members.</li>
-                <li>Communicate effectively with team members, management, and clients</li>
-                <li>Maintain an organized and clutter-free office environment.</li>
-                <li>Monitor and maintain office supplies.</li>
-                <li>Conducted field visit to capture farm sizes using ArcGIS field maps.</li>
-                <li>Collected, recorded and validated geospatial data for accurate mapping and analysis.</li>
-                <li>Worked on a risk assessment map focusing on identifying and analyzing encroached farmers near forest reserves.</li>
-                <li>Taking and recording farmers’ cocoa production volumes ensuring accurate and reliable datasets.</li>
-                <li>Managed and updated farmers’ membership data, maintaining clean, organized and verifiable records.</li>
-                <li>Prepared financial account reports and supported the audit process by cross-checking all financial records and supporting documentation accurately matched.</li>
-            </ul>
+        <div class="about-visual">
+            <img src="images/Sketch.png" alt="Digital art illustration representing an IT professional">
         </div>
     </div>
 
-    <!-- Technical Support (Part Time Remote Worker) -->
-    <div class="card shadow-sm rounded mt-3 reveal">
-        <div class="card-body">
-            <h5 class="card-title">Technical Support (Part Time Remote Worker)</h5>
-            <h6 class="card-subtitle mb-2 text-muted">AFRICA CENTRE FOR DIGITAL TRANSFORMATION (ACDT), Accra (Sep 2025 - Present)</h6>
-            <ul>
-                <li>Collaborated with team members virtually to ensure timely completion of assigned tasks and deliverables.</li>
-                <li>Contributed to the development of digital tools, resources, and documentation for organizational programs.</li>
-                <li>Designed, developed, and currently manage the company’s website, ensuring functionality, updates, and user-friendliness.</li>
-            </ul>
+    <h3>Research &amp; Projects</h3>
+
+    <div class="project-row">
+        <div>
+            <h5>Web-Based Inventory Management System</h5>
+            <p>Designed and implemented a web-based system to manage inventory data efficiently. Developed features for data entry, retrieval, and reporting, emphasizing data accuracy and usability.</p>
+            <div class="project-stack"><strong>Skills used:</strong> <span>PHP</span><span>HTML</span><span>CSS</span><span>Database Management</span><span>Data Cleaning</span><span>Reporting</span></div>
         </div>
+        <span class="project-type">Undergraduate Research</span>
     </div>
 
-    <!-- NATIONAL SERVICE PERSONNEL -->
-    <div class="card shadow-sm rounded mt-3 reveal">
-        <div class="card-body">
-            <h5 class="card-title">National Service Personnel</h5>
-            <h6 class="card-subtitle mb-2 text-muted">National Information Technology Agency (NITA), Accra, Ghana (Oct 2024 - Present)</h6>
-            <ul>
-                <li>Assisted in gathering and aligning website content and requirements with the agency’s specifications to ensure accuracy and regulatory compliance.</li>
-                <li>Actively tracked action points to maintain project momentum and deliver milestones on schedule.</li>
-                <li>Coordinated timely follow-ups with cross-functional units to resolve pending action points and maintain workflow continuity.</li>
-                <li>Participated in user testing and documented feedback to guide iterative improvement.</li>
-                <li>Conducted research and developed compliance checklists aligned with the Government of Ghana Enterprise Architecture Framework.</li>
-                <li>Verified SSL certificates and domain details for Ministries, Departments and Agencies (MDAs) to ensure secure communication.</li>
-                <li>Prepared weekly, monthly, and quarterly reports and drafted accurate meeting minutes for management.</li>
-                <li>Coordinated meeting schedules, tracked action points, and supported workflow continuity.</li>
-                <li>Facilitated training for interns on Windows OS installation, Microsoft Office configuration, virtualization, and WordPress setup.</li>
-                <li>Supported E-Visitor Logbook pilot operations by setting up devices, troubleshooting, and coordinating feedback for improvement.</li>
-            </ul>
+    <div class="project-row">
+        <div>
+            <h5>Development of Washing Bay System</h5>
+            <p>Developed a software system for managing and automating washing bay operations, including tracking, scheduling, and reporting.</p>
+            <div class="project-stack"><strong>Skills used:</strong> <span>C# </span><span>Database Management </span><span>Data Entry </span><span>Software Development </span></div>
         </div>
+        <span class="project-type">Mini Project</span>
     </div>
 
-    <!-- I.C.T Tutor -->
-    <div class="card shadow-sm rounded mt-3 reveal">
-        <div class="card-body">
-            <h5 class="card-title">I.C.T Tutor (School Based Internship)</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Osei Adutwum Senior High School, Jachie - Lake Bosomtwe Road (Jan 2024 - Mar 2024)</h6>
-            <ul>
-                <li>I.C.T Tutor.</li>
-                <li>Assisted in supervision of internal examination invigilation.</li>
-                <li>Repaired computers at the I.C.T labs.</li>
-                <li>Installed software on various computers.</li>
-                <li>Installation of Windows Operating System.</li>
-            </ul>
+    <div class="project-row">
+        <div>
+            <h5>E-Levy Calculator</h5>
+            <p>Developed a system to calculate electronic levy (E-Levy) transactions accurately and efficiently. Implemented features for user input, computation, and reporting.</p>
+            <div class="project-stack"><strong>Skills used:</strong> <span>Java</span><span>Database Management</span><span>Data Validation</span><span>Reporting</span></div>
         </div>
-    </div>
-
-    <!-- IT Consultant & Technician -->
-    <div class="card shadow-sm rounded mt-3 reveal">
-        <div class="card-body">
-            <h5 class="card-title">IT Consultant & Technician (Industrial Attachment)</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Ghana Revenue Authority, Suame TSC-Kumasi (Sep 2023 - Dec 2023)</h6>
-            <ul>
-                <li>Repairing of Office Computers.</li>
-                <li>Recording of Document Received.</li>
-                <li>File Document on Taxpayers' folder.</li>
-                <li>Issuing and receiving requested files.</li>
-                <li>Maintaining Taxpayers' folder.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- IT Technical & Support Officer -->
-    <div class="card shadow-sm rounded mt-3 reveal">
-        <div class="card-body">
-            <h5 class="card-title">IT Technical & Support Officer (Industrial Attachment)</h5>
-            <h6 class="card-subtitle mb-2 text-muted">KUAPA KOKOO Cooperative Cocoa Farmers & Marketing Union Limited, Kumasi-Ghana (Oct 2022 - Dec 2022)</h6>
-            <ul>
-                <li>Assist in entering farmers data.</li>
-                <li>Provided extensive IT support to internal and external stakeholders.</li>
-                <li>Installed new hardware and applications, updated existing system and continually monitor network performance.</li>
-                <li>Assist in processing and cleaning.</li>
-                <li>Updating Staff Data.</li>
-            </ul>
-        </div>
+        <span class="project-type">Mini Project</span>
     </div>
 </section>
 
+<!-- Experience -->
+<section id="experience">
+    <div class="container section-pad">
+        <h2 class="reveal">Experience</h2>
+
+        <div class="exp-tabs reveal">
+            <div class="exp-tab-list" role="tablist">
+                <button class="exp-tab active" data-tab="0" role="tab" aria-selected="true">MICL Farmers Union</button>
+                <button class="exp-tab" data-tab="1" role="tab" aria-selected="false">ACDT</button>
+                <button class="exp-tab" data-tab="2" role="tab" aria-selected="false">NITA</button>
+                <button class="exp-tab" data-tab="3" role="tab" aria-selected="false">Osei Adutwum SHS</button>
+                <button class="exp-tab" data-tab="4" role="tab" aria-selected="false">Ghana Revenue Auth.</button>
+                <button class="exp-tab" data-tab="5" role="tab" aria-selected="false">KUAPA KOKOO</button>
+            </div>
+
+            <div class="exp-panels">
+
+                <div class="exp-panel active" data-panel="0">
+                    <span class="exp-date">Sep 2025 – Present</span>
+                    <h5>Data Manager &amp; Office Assistant</h5>
+                    <h6>SEKYERE EAST (MICL) Cooperative Farmers Union, Kumasi — Full Time</h6>
+                    <ul>
+                        <li>Data entry, cleaning, analysis and software administration</li>
+                        <li>Administrative assistance — phone calls, emails, receiving visitors, coordinating meetings</li>
+                        <li>Manage physical and digital files, documents, and records</li>
+                        <li>Conducted field visits to capture farm sizes using ArcGIS field maps</li>
+                        <li>Collected and validated geospatial data for mapping and risk assessment</li>
+                        <li>Worked on a risk assessment map identifying encroached farmers near forest reserves</li>
+                        <li>Recorded cocoa production volumes and maintained farmers' membership data</li>
+                        <li>Prepared financial account reports and supported the audit process</li>
+                    </ul>
+                </div>
+
+                <div class="exp-panel" data-panel="1">
+                    <span class="exp-date">Sep 2025 – Present</span>
+                    <h5>Technical Support</h5>
+                    <h6>Africa Centre for Digital Transformation (ACDT), Accra — Part Time Remote</h6>
+                    <ul>
+                        <li>Collaborated virtually with the team to complete tasks and deliverables on time</li>
+                        <li>Contributed to developing digital tools, resources, and documentation</li>
+                        <li>Designed, built, and currently maintain the company's website</li>
+                    </ul>
+                </div>
+
+                <div class="exp-panel" data-panel="2">
+                    <span class="exp-date">Oct 2024 – Present</span>
+                    <h5>National Service Personnel</h5>
+                    <h6>National Information Technology Agency (NITA), Accra, Ghana</h6>
+                    <ul>
+                        <li>Gathered and aligned website content with the agency's specifications and compliance requirements</li>
+                        <li>Tracked action points to keep project milestones on schedule</li>
+                        <li>Developed compliance checklists aligned with the Government of Ghana Enterprise Architecture Framework</li>
+                        <li>Verified SSL certificates and domain details for MDAs</li>
+                        <li>Prepared weekly, monthly, and quarterly reports; drafted meeting minutes</li>
+                        <li>Trained interns on Windows OS installation, Microsoft Office, virtualization, and WordPress</li>
+                        <li>Supported the E-Visitor Logbook pilot — device setup, troubleshooting, and feedback coordination</li>
+                    </ul>
+                </div>
+
+                <div class="exp-panel" data-panel="3">
+                    <span class="exp-date">Jan 2024 – Mar 2024</span>
+                    <h5>I.C.T Tutor</h5>
+                    <h6>Osei Adutwum Senior High School, Jachie — School Based Internship</h6>
+                    <ul>
+                        <li>Taught ICT classes and assisted with examination invigilation</li>
+                        <li>Repaired computers in the ICT lab and handled software installations</li>
+                        <li>Installed Windows OS on multiple machines</li>
+                    </ul>
+                </div>
+
+                <div class="exp-panel" data-panel="4">
+                    <span class="exp-date">Sep 2023 – Dec 2023</span>
+                    <h5>IT Consultant &amp; Technician</h5>
+                    <h6>Ghana Revenue Authority, Suame TSC-Kumasi — Industrial Attachment</h6>
+                    <ul>
+                        <li>Repaired and maintained office computers</li>
+                        <li>Recorded incoming documents and filed them on taxpayers' folders</li>
+                        <li>Issued and received requested files; maintained folder records</li>
+                    </ul>
+                </div>
+
+                <div class="exp-panel" data-panel="5">
+                    <span class="exp-date">Oct 2022 – Dec 2022</span>
+                    <h5>IT Technical &amp; Support Officer</h5>
+                    <h6>KUAPA KOKOO Cooperative Cocoa Farmers &amp; Marketing Union, Kumasi — Industrial Attachment</h6>
+                    <ul>
+                        <li>Assisted with farmers' data entry and record updates</li>
+                        <li>Provided IT support to internal and external stakeholders</li>
+                        <li>Installed hardware and software; monitored network performance</li>
+                        <li>Helped with data processing, cleaning, and staff data updates</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Graphic Design Works -->
 <section id="designs" class="container section-pad">
     <h2 class="reveal">Graphic Design Works</h2>
-    <p class="text-muted reveal">
-        Some of my Graphic Designing Works
-    </p>
-
-    <div class="row g-4 mt-4">
-
-        <!-- Flyer 1 -->
-        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
-            <div class="flyer-card">
-                <img src="images/designs/flyer1.jpeg" alt="Event Flyer">
-            </div>
-        </div>
-
-        <!-- Flyer 2 -->
-        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
-            <div class="flyer-card">
-                <img src="images/designs/flyer2.jpeg" alt="Event Flyer">
-            </div>
-        </div>
-
-        <!-- Flyer 3 -->
-        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
-            <div class="flyer-card">
-                <img src="images/designs/flyer3.jpeg" alt="Event Flyer">
-            </div>
-        </div>
-
-        <!-- Flyer 4 -->
-        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
-            <div class="flyer-card">
-                <img src="images/designs/flyer4.jpeg" alt="Event Flyer">
-            </div>
-        </div>
-
-        <!-- Flyer 5 -->
-        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
-            <div class="flyer-card">
-                <img src="images/designs/flyer5.png" alt="Event Flyer">
-            </div>
-        </div>
-
-        <!-- Flyer 6 -->
-        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
-            <div class="flyer-card">
-                <img src="images/designs/flyer6.png" alt="Event Flyer">
-
-            </div>
-        </div>
-         <!-- Flyer 7 -->
-        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
-            <div class="flyer-card">
-                <img src="images/designs/flyer7.png" alt="Event Flyer">
-            </div>
-        </div>
-        <!-- Flyer 8 -->
-        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
-            <div class="flyer-card">
-                <img src="images/designs/flyer8.png" alt="Event Flyer">
-            </div>
-        </div>
-
-        <!-- Flyer 9 -->
-        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
-            <div class="flyer-card">
-                <img src="images/designs/flyer9.png" alt="Event Flyer">
-            </div>
-        </div>
-
-        <!-- Flyer 10 -->
-        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
-            <div class="flyer-card">
-                <img src="images/designs/flyer10.jpeg" alt="Event Flyer">
-            </div>
-        </div>
-
-        <!-- Flyer 11 -->
-        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
-            <div class="flyer-card">
-                <img src="images/designs/flyer11.jpeg" alt="Event Flyer">
-            </div>
-        </div>
-
-        <!-- Flyer 12 -->
-        <div class="col-lg-3 col-md-4 col-sm-6 reveal">
-            <div class="flyer-card">
-                <img src="images/designs/flyer12.png" alt="Event Flyer">
-            </div>
-        </div>
-
-
+    <p class="gallery-intro reveal">A selection of flyers and promotional materials I've designed.</p>
+    <div class="row g-3">
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal"><div class="flyer-card"><img src="images/designs/flyer1.jpeg" alt="Design work 1"></div></div>
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal"><div class="flyer-card"><img src="images/designs/flyer2.jpeg" alt="Design work 2"></div></div>
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal"><div class="flyer-card"><img src="images/designs/flyer3.jpeg" alt="Design work 3"></div></div>
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal"><div class="flyer-card"><img src="images/designs/flyer4.jpeg" alt="Design work 4"></div></div>
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal"><div class="flyer-card"><img src="images/designs/flyer5.png" alt="Design work 5"></div></div>
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal"><div class="flyer-card"><img src="images/designs/flyer6.png" alt="Design work 6"></div></div>
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal"><div class="flyer-card"><img src="images/designs/flyer7.png" alt="Design work 7"></div></div>
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal"><div class="flyer-card"><img src="images/designs/flyer8.png" alt="Design work 8"></div></div>
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal"><div class="flyer-card"><img src="images/designs/flyer9.png" alt="Design work 9"></div></div>
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal"><div class="flyer-card"><img src="images/designs/flyer10.jpeg" alt="Design work 10"></div></div>
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal"><div class="flyer-card"><img src="images/designs/flyer11.jpeg" alt="Design work 11"></div></div>
+        <div class="col-lg-3 col-md-4 col-sm-6 reveal"><div class="flyer-card"><img src="images/designs/flyer12.png" alt="Design work 12"></div></div>
     </div>
 </section>
 
-
-<!-- Skills Section -->
+<!-- Skills -->
 <section id="skills" class="container section-pad reveal">
-    <h2>SKILLS</h2>
-    <h3>Technical Skills</h3>
-    <ul>
-        <li>ArcGIS Pro – geospatial data collection and mapping</li>
-        <li>Risk assessment mapping (encroached farms near forest reserves)</li>
-        <li>Data entry, cleaning, management, and analysis</li>
-        <li>Financial account report preparation and audit support</li>
-        <li>Website design, development, and management (PHP, HTML, CSS, WordPress)</li>
-        <li>Software development – PHP, C#, Java, database management</li>
-        <li>IT support – hardware, network troubleshooting, software installation</li>
-        <li>Compliance and documentation – checklists, SSL/domain verification, report preparation</li>
-        <li>Digital tools and transformation initiatives support</li>
-    </ul>
+    <h2>Skills</h2>
+
+    <h3>Technical</h3>
+    <table class="skills-table">
+        <tbody>
+            <tr>
+                <td>Web</td>
+                <td><span>HTML</span><span>CSS</span><span>PHP</span><span>WordPress</span></td>
+            </tr>
+            <tr>
+                <td>Software Dev</td>
+                <td><span>C#</span><span>Java</span><span>SQL</span><span>Database Management</span></td>
+            </tr>
+            <tr>
+                <td>Data &amp; GIS</td>
+                <td><span>ArcGIS Pro</span><span>Data Entry</span><span>Data Cleaning</span><span>Data Analysis</span><span>Geospatial Mapping</span><span>Risk Assessment Mapping</span></td>
+            </tr>
+            <tr>
+                <td>IT Support</td>
+                <td><span>Hardware Repair</span><span>Network Troubleshooting</span><span>Software Installation</span><span>Windows OS</span><span>Virtualization</span></td>
+            </tr>
+            <tr>
+                <td>Reporting</td>
+                <td><span>Financial Reports</span><span>Audit Support</span><span>Compliance Docs</span><span>SSL Verification</span><span>Meeting Minutes</span></td>
+            </tr>
+        </tbody>
+    </table>
+
     <h3>Soft Skills</h3>
-    <ul>
-        <li>Attention to detail</li>
-        <li>Organization and time management</li>
-        <li>Communication and collaboration</li>
-        <li>Problem-solving and analytical thinking</li>
-        <li>Adaptability and learning agility</li>
-        <li>Leadership and initiative</li>
-        <li>Team collaboration</li>
-        <li>Professionalism & integrity</li>
-    </ul>
+    <table class="skills-table">
+        <tbody>
+            <tr>
+                <td>Work Style</td>
+                <td><span>Attention to Detail</span><span>Time Management</span><span>Adaptability</span><span>Learning Agility</span></td>
+            </tr>
+            <tr>
+                <td>People</td>
+                <td><span>Communication</span><span>Collaboration</span><span>Leadership</span><span>Professionalism</span></td>
+            </tr>
+            <tr>
+                <td>Thinking</td>
+                <td><span>Problem-Solving</span><span>Analytical Thinking</span><span>Initiative</span></td>
+            </tr>
+        </tbody>
+    </table>
 </section>
 
-<!-- Certifications Section -->
-<section id="certifications" class="container section-pad reveal">
-    <h2>CERTIFICATIONS</h2>
-    <ul>
-        <li><a href="https://regulatory.nita.gov.gh/verify-certificate?certificate_number=NITA/ITG/31202352" target="_blank">NITA IT Graduate Certificate (NITA/ITG/31202352)</a></li>
-        <li><a href="https://regulatory.nita.gov.gh/verify-certificate?certificate_number=NITA/ITT/21200852" target="_blank">NITA IT Technician Certificate (NITA/ITT/21200852)</a></li>
-        <li><a href="https://www.udemy.com/certificate/UC-aef4081c-6f8d-463a-9528-1716fdb562b7/" target="_blank">Udemy Wordpress Website Developer Certificate</a></li>
-        <li><a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-af65dc8d-136a-4bc0-9dcd-3b23be9ad1be.pdf" target="_blank">Udemy Bash Scripting for Linux Security Certificate</a></li>
-        <li><a href="https://blob.sololearn.com/certificates/de6ca3f1-e2a5-402a-bfe5-ecb431b208a4.pdf" target="_blank">SoloLearn HTML Certificate</a></li>
-        <li><a href="https://blob.sololearn.com/certificates/c58eae18-9272-4bac-9508-4e8144ff2d70.pdf" target="_blank">SoloLearn SQL Certificate</a></li>
-    </ul>
+<!-- Certifications -->
+<section id="certifications">
+    <div class="container section-pad reveal">
+        <h2>Certifications</h2>
+        <ul class="cert-list">
+            <li>
+                <a href="https://regulatory.nita.gov.gh/verify-certificate?certificate_number=NITA/ITG/31202352" target="_blank" rel="noopener noreferrer">
+                    NITA IT Graduate Certificate — NITA/ITG/31202352
+                    <i class='bx bx-link-external'></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://regulatory.nita.gov.gh/verify-certificate?certificate_number=NITA/ITT/21200852" target="_blank" rel="noopener noreferrer">
+                    NITA IT Technician Certificate — NITA/ITT/21200852
+                    <i class='bx bx-link-external'></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.udemy.com/certificate/UC-aef4081c-6f8d-463a-9528-1716fdb562b7/" target="_blank" rel="noopener noreferrer">
+                    Udemy — WordPress Website Developer
+                    <i class='bx bx-link-external'></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-af65dc8d-136a-4bc0-9dcd-3b23be9ad1be.pdf" target="_blank" rel="noopener noreferrer">
+                    Udemy — Bash Scripting for Linux Security
+                    <i class='bx bx-link-external'></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://blob.sololearn.com/certificates/de6ca3f1-e2a5-402a-bfe5-ecb431b208a4.pdf" target="_blank" rel="noopener noreferrer">
+                    SoloLearn — HTML
+                    <i class='bx bx-link-external'></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://blob.sololearn.com/certificates/c58eae18-9272-4bac-9508-4e8144ff2d70.pdf" target="_blank" rel="noopener noreferrer">
+                    SoloLearn — SQL
+                    <i class='bx bx-link-external'></i>
+                </a>
+            </li>
+        </ul>
+    </div>
 </section>
 
-<!-- Contact Section -->
+<!-- Contact -->
 <section id="contact" class="container section-pad reveal">
-    <h2>Contact Me</h2>
-    <div class="contact-info mt-4">
-        <p><strong>Email:</strong> <a href="mailto:emmanuelotengantwi@gmail.com">emmanuelotengantwi@gmail.com</a></p>
-        <p><strong>WhatsApp and Call:</strong> <a href="tel:+233593936951">+233 59 393 6951</a></p>
+    <h2>Contact</h2>
+    <div class="contact-layout">
+        <div class="contact-left">
+            <h3>Let's work together.</h3>
+            <p>
+                Whether you have a project, an opportunity, or just want to connect —
+                feel free to reach out. I'll get back to you as soon as I can.
+            </p>
+        </div>
+        <div class="contact-methods">
+            <div class="contact-method">
+                <i class='bx bx-envelope'></i>
+                <div>
+                    <div class="contact-method-label">Email</div>
+                    <a href="mailto:emmanuelotengantwi@gmail.com">emmanuelotengantwi@gmail.com</a>
+                </div>
+            </div>
+            <div class="contact-method">
+                <i class='bx bxl-whatsapp'></i>
+                <div>
+                    <div class="contact-method-label">WhatsApp &amp; Call</div>
+                    <a href="tel:+233593936951">+233 59 393 6951</a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="site-footer text-center">
+<footer class="site-footer">
     <p>&copy; 2026 Emmanuel Oteng Antwi. All rights reserved.</p>
 </footer>
 

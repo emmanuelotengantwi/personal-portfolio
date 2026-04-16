@@ -1,4 +1,57 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const root = document.documentElement;
+    const themeToggle = document.getElementById("themeToggle");
+    const themeToggleIcon = themeToggle ? themeToggle.querySelector("i") : null;
+    const themeMedia = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+
+    const getSystemTheme = () => (themeMedia && themeMedia.matches ? "dark" : "light");
+
+    const getActiveTheme = () => root.dataset.theme || getSystemTheme();
+
+    const setToggleIcon = () => {
+        if (!themeToggleIcon) {
+            return;
+        }
+
+        const isDark = getActiveTheme() === "dark";
+        themeToggleIcon.className = isDark ? "bx bx-sun" : "bx bx-moon";
+        if (themeToggle) {
+            themeToggle.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+        }
+    };
+
+    const applyTheme = (theme) => {
+        if (theme === "light" || theme === "dark") {
+            root.dataset.theme = theme;
+        } else {
+            delete root.dataset.theme;
+        }
+        setToggleIcon();
+    };
+
+    if (themeToggle) {
+        const storedTheme = localStorage.getItem("theme");
+        if (storedTheme === "light" || storedTheme === "dark") {
+            applyTheme(storedTheme);
+        } else {
+            setToggleIcon();
+        }
+
+        themeToggle.addEventListener("click", () => {
+            const nextTheme = getActiveTheme() === "dark" ? "light" : "dark";
+            localStorage.setItem("theme", nextTheme);
+            applyTheme(nextTheme);
+        });
+
+        if (themeMedia) {
+            themeMedia.addEventListener("change", () => {
+                if (!root.dataset.theme) {
+                    setToggleIcon();
+                }
+            });
+        }
+    }
+
     const navLinks = Array.from(document.querySelectorAll(".navbar .nav-link"));
     const sections = Array.from(document.querySelectorAll("header#home, section[id]"));
     const navbar = document.querySelector(".site-navbar");
@@ -79,4 +132,68 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", setActiveLink);
 
     setActiveLink();
+
+    // Experience tabs
+    const expTabs = document.querySelectorAll(".exp-tab");
+    const expPanels = document.querySelectorAll(".exp-panel");
+
+    expTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            expTabs.forEach((t) => {
+                t.classList.remove("active");
+                t.setAttribute("aria-selected", "false");
+            });
+            expPanels.forEach((p) => p.classList.remove("active"));
+
+            tab.classList.add("active");
+            tab.setAttribute("aria-selected", "true");
+
+            const panel = document.querySelector(`.exp-panel[data-panel="${tab.dataset.tab}"]`);
+            if (panel) panel.classList.add("active");
+        });
+    });
+
+    // Typewriter effect for hero eyebrow roles
+    const typedEl = document.getElementById("typed-role");
+    if (typedEl) {
+        const roles = [
+            "Frontend Developer",
+            "IT Support Specialist",
+            "Graphic Designer",
+            "Data Manager",
+            "Certified IT Technician"
+        ];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let delay = 100;
+
+        function tick() {
+            const current = roles[roleIndex];
+
+            if (isDeleting) {
+                charIndex--;
+                delay = 45;
+            } else {
+                charIndex++;
+                delay = 95;
+            }
+
+            typedEl.textContent = current.slice(0, charIndex);
+
+            if (!isDeleting && charIndex === current.length) {
+                delay = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                delay = 400;
+            }
+
+            setTimeout(tick, delay);
+        }
+
+        // Start after hero fade-in animations complete
+        setTimeout(tick, 900);
+    }
 });
